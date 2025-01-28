@@ -1,6 +1,6 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import TheWelcome from './components/TheWelcome.vue'
+import MovieList from './components/MovieList.vue'
 </script>
 
 <template>
@@ -8,11 +8,10 @@ import TheWelcome from './components/TheWelcome.vue'
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
-      <TheWelcome msg="You did it!" />
+      <MovieList msg="You did it!" />
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
         <RouterLink to="/MyReviews">My Reviews</RouterLink>
         <RouterLink to="/ReviewStats">Review Stats</RouterLink>
       </nav>
