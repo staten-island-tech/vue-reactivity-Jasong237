@@ -1,6 +1,6 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import MovieList from './components/MovieList.vue'
+import MusicList from './components/MusicList.vue'
 </script>
 
 <template>
@@ -8,7 +8,7 @@ import MovieList from './components/MovieList.vue'
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
-      <MovieList msg="You did it!" />
+      <MusicList msg="You did it!" />
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
