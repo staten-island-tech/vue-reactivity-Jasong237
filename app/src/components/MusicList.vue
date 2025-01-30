@@ -1,5 +1,5 @@
 <template>
-  <div class="MovieList">
+  <div>
     <h1>The movies will go here ujyhtijhtiyjhityjhijtyhijytijijtgbritjgirjtgijtrigjtrijgji</h1>
   </div>
 </template>
