@@ -1,6 +1,13 @@
 <script setup>
 import AlbumList from '../components/AlbumList.vue'
-const albums = [{ name: 'Album 1' }, { name: 'Album 2' }]
+const albums = [
+  { name: 'Album 1', img: 'hello' },
+  { name: 'Album 2', img: 'hello' },
+  { name: 'Album 1', img: 'hello' },
+  { name: 'Album 2', img: 'hello' },
+  { name: 'Album 1', img: 'hello' },
+  { name: 'Album 2', img: 'hello' },
+]
 </script>
 
 <template>

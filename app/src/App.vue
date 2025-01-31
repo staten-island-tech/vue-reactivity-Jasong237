@@ -5,16 +5,13 @@ import MusicList from './components/MusicList.vue'
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
     <div class="wrapper">
-      <MusicList msg="You did it!" />
-
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/MyReviews">My Reviews</RouterLink>
         <RouterLink to="/ReviewStats">Review Stats</RouterLink>
       </nav>
+      <MusicList msg="You did it!" />
     </div>
   </header>
 
