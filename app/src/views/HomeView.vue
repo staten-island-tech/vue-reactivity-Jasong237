@@ -1,5 +1,5 @@
 <script setup>
-import AlbumList from '../components/AlbumList.vue'
+/* import AlbumList from '../components/AlbumList.vue'
 const albums = [
   { name: 'Album 1', img: 'hello' },
   { name: 'Album 2', img: 'hello' },
@@ -7,15 +7,15 @@ const albums = [
   { name: 'Album 2', img: 'hello' },
   { name: 'Album 1', img: 'hello' },
   { name: 'Album 2', img: 'hello' },
-]
+] */
 </script>
 
 <template>
   <main>
-    <AlbumList v-for="album in albums" :key="album.name" :album="album" />
+    <!--     <AlbumList v-for="album in albums" :key="album.name" :album="album" />
     <div>
       <h1 class="text-3xl font-bold underline">Hello</h1>
-    </div>
+    </div> -->
   </main>
 </template>
 
