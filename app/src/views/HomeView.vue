@@ -16,6 +16,7 @@ const albums = [
     <div>
       <h1 class="text-3xl font-bold underline">Hello</h1>
     </div> -->
+    <h1 class="text-3xl font-bold underline">Hello</h1>
   </main>
 </template>
 

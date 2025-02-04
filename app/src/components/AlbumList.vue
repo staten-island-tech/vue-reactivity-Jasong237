@@ -5,7 +5,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="card max-w-sm rounded overflow-hidden shadow-lg ">
+  <div class="card max-w-sm rounded overflow-hidden shadow-lg">
     <img class="w-50" :src="album.img" />
     <div class="px-6 py-4">
       <div class="font-bold text-xl mb-2">{{ album.name }}</div>

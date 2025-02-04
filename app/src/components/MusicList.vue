@@ -19,9 +19,7 @@ const albums = [
 
 <template>
   <main>
-    <div
-      class="container justify-center flex flex-wrap items-center h-screen"
-    >
+    <div class="container justify-center flex flex-wrap items-center h-screen">
       <AlbumList v-for="album in albums" :key="album.name" :album="album" />
     </div>
     <div>
