@@ -1,19 +1,26 @@
 <script setup>
 import AlbumList from '../components/AlbumList.vue'
 const albums = [
-  { name: 'Album 1', img: 'hello' },
-  { name: 'Album 2', img: 'hello' },
-  { name: 'Album 1', img: 'hello' },
-  { name: 'Album 2', img: 'hello' },
-  { name: 'Album 1', img: 'hello' },
-  { name: 'Album 2', img: 'hello' },
+  { name: 'The College Dropout', img: '/src/albums/the college dropout.jpg' },
+  { name: 'Late Registration', img: '/src/albums/late registration.jpg' },
+  { name: 'Graduation', img: '/src/albums/graduation.jpg' },
+  { name: '808s & Heartbreak', img: '/src/albums/808s and heartbreak.webp' },
+  { name: 'Watch the Throne', img: '/src/albums/watch the throne.jpg' },
+  { name: 'MBDTF', img: '/src/albums/mbdtf.jpg' },
+  { name: 'The Life of Pablo', img: '/src/albums/the life of pablo.jpg' },
+  { name: 'Ye', img: '/src/albums/ye.jpg' },
+  { name: 'Kids See Ghosts', img: '/src/albums/kids see ghosts.png' },
+  { name: 'Jesus is King', img: '/src/albums/jesus is king.png' },
+  { name: 'Donda', img: '/src/albums/donda.jpg' },
+  { name: 'Vultures 1', img: '/src/albums/vultures 1.webp' },
+  { name: 'Vultures 2', img: '/src/albums/vultures 2.png' },
 ]
 </script>
 
 <template>
   <main>
     <div
-      class="container w-full h-full justify-center max-w-md flex items-center flex-col flex-wrap"
+      class="container justify-center flex flex-wrap items-center h-screen"
     >
       <AlbumList v-for="album in albums" :key="album.name" :album="album" />
     </div>
