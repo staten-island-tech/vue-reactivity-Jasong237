@@ -1,12 +1,21 @@
 <script setup>
 import MyReviews from '@/views/MyReviews.vue'
 import router from '../router/index'
-defineProps({
+
+const props = defineProps({
   album: Object,
+  name: String,
+  img: String,
+  stars: Number,
+  review: String,
 })
 
 function review() {
-  router.push('/ReviewStats')
+  router.push('/CurrentReview')
+}
+
+function CreateReview() {
+  /*   console.log(props.album.name) */
 }
 </script>
 

@@ -1,8 +1,13 @@
 <script setup>
 import AlbumList from '../components/AlbumList.vue'
 const albums = [
-  { name: 'The College Dropout', img: '/src/albums/the college dropout.jpg' },
-  /*   { name: 'Late Registration', img: '/src/albums/late registration.jpg' },
+  {
+    name: 'The College Dropout',
+    img: '/src/albums/the college dropout.jpg',
+    stars: '',
+    review: '',
+  },
+  /*  { name: 'Late Registration', img: '/src/albums/late registration.jpg' },
   { name: 'Graduation', img: '/src/albums/graduation.jpg' },
   { name: '808s & Heartbreak', img: '/src/albums/808s and heartbreak.webp' },
   { name: 'Watch the Throne', img: '/src/albums/watch the throne.jpg' },
@@ -19,7 +24,7 @@ const albums = [
 
 <template>
   <main>
-    <div class="container justify-end flex flex-wrap items-center h-screen mr-16 mx-sm">
+    <div class="container justify-end flex flex-wrap items-center h-screen">
       <AlbumList v-for="album in albums" :key="album.name" :album="album" />
     </div>
     <div>

@@ -11,7 +11,6 @@ import MusicList from './components/MusicList.vue'
         <RouterLink to="/MyReviews">My Reviews</RouterLink>
         <RouterLink to="/ReviewStats">Review Stats</RouterLink>
       </nav>
-      <MusicList msg="You did it!" />
     </div>
   </header>
 

@@ -5,17 +5,23 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/home',
+      path: '/',
       name: 'home',
       component: HomeView,
       children: [
         { path: '/reviewstats', name: 'reviewstats', component: '../views/ReviewStats.vue' },
+        { path: '/currentreview', name: 'currentreview', component: '../views/CurrentReview.vue' },
       ],
     },
     {
       path: '/reviewstats',
       name: 'reviewstats',
       component: () => import('../views/ReviewStats.vue'),
+    },
+    {
+      path: '/currentreview',
+      name: 'currentreview',
+      component: () => import('../views/CurrentReview.vue'),
     },
     {
       path: '/myreviews',
