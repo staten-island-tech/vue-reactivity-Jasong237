@@ -4,6 +4,7 @@ const albums = [
   {
     name: 'The College Dropout',
     img: '/src/albums/the college dropout.jpg',
+    id: 1,
     stars: '',
     review: '',
   },

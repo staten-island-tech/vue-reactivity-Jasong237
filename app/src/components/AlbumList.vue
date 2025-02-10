@@ -1,21 +1,24 @@
 <script setup>
+import { ref } from 'vue'
 import MyReviews from '@/views/MyReviews.vue'
 import router from '../router/index'
+
+let currentAlbum = ref(0)
 
 const props = defineProps({
   album: Object,
   name: String,
+  id: Number,
   img: String,
   stars: Number,
   review: String,
 })
 
 function review() {
+  currentAlbum = ref('props.album.id')
+  console.log(currentAlbum)
   router.push('/CurrentReview')
-}
-
-function CreateReview() {
-  /*   console.log(props.album.name) */
+  return currentAlbum
 }
 </script>
 

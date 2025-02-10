@@ -3,8 +3,9 @@
 </template>
 
 <script setup>
-/* import AlbumList from './components/AlbumList.vue' */
-console.log(props.album.name)
+import { Vue } from 'vue'
+import { currentAlbum } from '../components/AlbumList.vue'
+console.log(currentAlbum)
 </script>
 
 <style lang="scss" scoped></style>
