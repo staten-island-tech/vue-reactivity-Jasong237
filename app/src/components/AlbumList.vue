@@ -3,7 +3,7 @@ import { ref } from 'vue'
 import MyReviews from '@/views/MyReviews.vue'
 import router from '../router/index'
 
-let currentAlbum = ref(0)
+let currentAlbum = ref()
 
 const props = defineProps({
   album: Object,
@@ -15,8 +15,9 @@ const props = defineProps({
 })
 
 function review() {
-  currentAlbum = ref('props.album.id')
+  currentAlbum = ref('props.album.name')
   console.log(currentAlbum)
+  console.log()
   router.push('/CurrentReview')
   return currentAlbum
 }
@@ -28,12 +29,7 @@ function review() {
     <div class="px-6 py-4">
       <div class="font-bold text-xl mb-2">{{ album.name }}</div>
       <p>Some extra text if needed</p>
-      <button
-        @click="review"
-        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded"
-      >
-        Review
-      </button>
+      <slot> </slot>
     </div>
   </div>
 </template>
