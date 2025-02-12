@@ -1,6 +1,6 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import MusicList from './components/MusicList.vue'
+
 </script>
 
 <template>

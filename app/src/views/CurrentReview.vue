@@ -1,5 +1,13 @@
 <script setup>
-import id from '../views/HomeView.vue'
+import { ref, onMounted } from 'vue';
+
+const id = ref('');
+
+onMounted(() => {
+  // Get the value of id from localStorage when the component is mounted
+  id.value = localStorage.getItem('selectedAlbumId') || 'No ID Found';
+  console.log(id.value); // Debugging line
+});
 </script>
 
 <template>
@@ -10,5 +18,3 @@ import id from '../views/HomeView.vue'
     <button></button>
   </div>
 </template>
-
-<style lang="scss" scoped></style>
