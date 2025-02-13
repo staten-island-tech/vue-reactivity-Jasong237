@@ -6,14 +6,14 @@ export const albums = [
     img: '/src/albums/the college dropout.jpg',
     stars: ref(0),
     review: ref(''),
-  } /* 
+  },
   {
     name: 'Late Registration',
     id: '2',
     img: '/src/albums/late registration.jpg',
-    stars: '',
+    stars: ref(0),
     review: '',
-  },
+  } /*, 
   { name: 'Graduation', id: '3', img: '/src/albums/graduation.jpg', stars: '', review: '' },
   {
     name: '808s & Heartbreak',

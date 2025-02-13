@@ -4,7 +4,8 @@ import AlbumList from '../components/AlbumList.vue'
 import { ref } from 'vue'
 import { albums } from '../albums/albums.js'
 
-console.log(albums.stars.value)
+console.log(albums)
+console.log(albums[0].stars.value)
 function review(album) {
   console.log('Review button clicked for album:', album.name)
   localStorage.setItem('selectedAlbumId', album.id)
