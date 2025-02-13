@@ -1,11 +1,12 @@
+import { ref } from 'vue'
 export const albums = [
   {
     name: 'The College Dropout',
     id: '1',
     img: '/src/albums/the college dropout.jpg',
-    stars: '',
-    review: '',
-  },
+    stars: ref(0),
+    review: ref(''),
+  } /* 
   {
     name: 'Late Registration',
     id: '2',
@@ -47,5 +48,5 @@ export const albums = [
   { name: 'Jesus is King', id: '10', img: '/src/albums/jesus is king.png', stars: '', review: '' },
   { name: 'Donda', id: '11', img: '/src/albums/donda.jpg', stars: '', review: '' },
   { name: 'Vultures 1', id: '12', img: '/src/albums/vultures 1.webp', stars: '', review: '' },
-  { name: 'Vultures 2', id: '13', img: '/src/albums/vultures 2.png', stars: '', review: '' },
+  { name: 'Vultures 2', id: '13', img: '/src/albums/vultures 2.png', stars: '', review: '' }, */,
 ]
