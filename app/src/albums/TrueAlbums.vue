@@ -1,19 +1,36 @@
-import { ref } from 'vue'
-export const albums = [
-  {
-    name: 'The College Dropout',
-    id: '1',
-    img: '/src/albums/the college dropout.jpg',
-    stars: ref(0),
-    review: ref(''),
-  },
-  {
-    name: 'Late Registration',
-    id: '2',
-    img: '/src/albums/late registration.jpg',
-    stars: ref(0),
-    review: '',
-  } /*, 
+<template>
+  <div>
+
+  </div>
+</template>
+
+
+
+<script>
+
+import { reactive } from 'vue'
+
+export function useAlbums() {
+  const albums = reactive([
+    {
+      name: 'The College Dropout',
+      id: '1',
+      img: '/src/albums/the college dropout.jpg',
+      stars: 0,
+      review: '',
+    },
+    {
+      name: 'Late Registration',
+      id: '2',
+      img: '/src/albums/late registration.jpg',
+      stars: 0,
+      review: '',
+    },
+  ])
+  return { albums }
+}
+
+/*, 
   { name: 'Graduation', id: '3', img: '/src/albums/graduation.jpg', stars: '', review: '' },
   {
     name: '808s & Heartbreak',
@@ -48,5 +65,11 @@ export const albums = [
   { name: 'Jesus is King', id: '10', img: '/src/albums/jesus is king.png', stars: '', review: '' },
   { name: 'Donda', id: '11', img: '/src/albums/donda.jpg', stars: '', review: '' },
   { name: 'Vultures 1', id: '12', img: '/src/albums/vultures 1.webp', stars: '', review: '' },
-  { name: 'Vultures 2', id: '13', img: '/src/albums/vultures 2.png', stars: '', review: '' }, */,
-]
+  { name: 'Vultures 2', id: '13', img: '/src/albums/vultures 2.png', stars: '', review: '' }, */
+
+</script>
+
+<style lang="scss" scoped>
+
+</style>
+

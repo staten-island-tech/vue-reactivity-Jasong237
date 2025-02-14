@@ -4,23 +4,11 @@ import router from '../router/index'
 /* import { albums } from '../albums/albums.js' */
 import AlbumList from '@/components/AlbumList.vue'
 
-const albums = [
-  {
-    name: 'The College Dropout',
-    id: '1',
-    img: '/src/albums/the college dropout.jpg',
-    stars: ref(0),
-    review: ref(''),
-  },
-  {
-    name: 'Late Registration',
-    id: '2',
-    img: '/src/albums/late registration.jpg',
-    stars: ref(0),
-    review: ref(''),
-  },
-]
-console.log(albums[0].stars.value)
+import { useAlbums } from '../albums/TrueAlbums.vue'
+
+const { albums } = useAlbums()
+
+console.log(albums[0].stars)
 const currentArray = ref([])
 
 const id = ref('')
@@ -39,6 +27,8 @@ onMounted(() => {
     }
   })
 })
+
+
 
 function syncArray(album) {
   currentArray.value.push(album)
@@ -91,13 +81,15 @@ function submitReview() {
     const albtum = currentArray.value[albumIndex]
     console.log('yo', albtum)
 
-    albums[0].stars.value = selectedRating.value
+    albums[0].stars = selectedRating.value
     /* currentArray[albumIndex].review.value = reviewText.value */
   }
-  console.log('hey', selectedRating.value)
   console.log('HEllo', albumIndex)
-  console.log(albums[0].stars.value)
-  console.log('Updated Album:', albums)
+  albums.forEach((album) => {
+    console.log(album)
+  })
+  console.log('stars', albums[0].stars)
+  console.log('Updated Album:', albums[0])
   // Optionally reset the form
   reviewText.value = ''
   selectedRating.value = 0
