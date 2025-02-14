@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, reactive } from 'vue'
 import router from '../router/index'
 /* import { albums } from '../albums/albums.js' */
 import AlbumList from '@/components/AlbumList.vue'
@@ -7,7 +7,7 @@ import AlbumList from '@/components/AlbumList.vue'
 import { useAlbums } from '../albums/TrueAlbums.vue'
 
 const { albums } = useAlbums()
-
+const tempArray = reactive([])
 console.log(albums[0].stars)
 const currentArray = ref([])
 
@@ -27,8 +27,6 @@ onMounted(() => {
     }
   })
 })
-
-
 
 function syncArray(album) {
   currentArray.value.push(album)
@@ -69,8 +67,7 @@ function star5() {
 }
 
 const reviewText = ref('')
-const selectedRating = ref(0) // Store selected rating
-// Update the selected album and add the review
+const selectedRating = ref(0)
 function submitReview() {
   const albumIndex = currentArray.value.findIndex((album) => album.id === id.value)
   selectedRating.value = starAmt.value
@@ -84,16 +81,31 @@ function submitReview() {
     albums[0].stars = selectedRating.value
     /* currentArray[albumIndex].review.value = reviewText.value */
   }
+
   console.log('HEllo', albumIndex)
   albums.forEach((album) => {
-    console.log(album)
+    if (album.id !== id.value) {
+      console.log('Jason', album)
+    }
+
+    /*    console.log(album) */
   })
+  deleteAlbum()
+  albums.push(currentArray.value)
+  console.log('Temp', tempArray)
+
+  /*   albums = [] */
+  console.log('Test', albums)
+  /*   albums.push(currentArray) */
   console.log('stars', albums[0].stars)
   console.log('Updated Album:', albums[0])
-  // Optionally reset the form
+
   reviewText.value = ''
   selectedRating.value = 0
-  router.push('/')
+  /*   router.push('/') */
+}
+const deleteAlbum = (index) => {
+  albums.splice(index, 1) // Remove the album at the specified index
 }
 </script>
 

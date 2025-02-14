@@ -1,13 +1,8 @@
 <template>
-  <div>
-
-  </div>
+  <div></div>
 </template>
 
-
-
 <script>
-
 import { reactive } from 'vue'
 
 export function useAlbums() {
@@ -66,10 +61,6 @@ export function useAlbums() {
   { name: 'Donda', id: '11', img: '/src/albums/donda.jpg', stars: '', review: '' },
   { name: 'Vultures 1', id: '12', img: '/src/albums/vultures 1.webp', stars: '', review: '' },
   { name: 'Vultures 2', id: '13', img: '/src/albums/vultures 2.png', stars: '', review: '' }, */
-
 </script>
 
-<style lang="scss" scoped>
-
-</style>
-
+<style lang="scss" scoped></style>
