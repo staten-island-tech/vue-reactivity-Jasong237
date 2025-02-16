@@ -3,27 +3,120 @@
 </template>
 
 <script>
-import { reactive } from 'vue'
+import { reactive, watch, onMounted } from 'vue'
 
 export function useAlbums() {
-  const albums = reactive([
-    {
-      name: 'The College Dropout',
-      id: '1',
-      img: '/src/albums/the college dropout.jpg',
-      stars: 0,
-      review: '',
+  const storedAlbums = JSON.parse(localStorage.getItem('albums')) || []
+
+  // Sort the albums by the 'id' field before setting them in reactive
+  const albums = reactive(
+    storedAlbums.length
+      ? storedAlbums.sort((a, b) => a.id - b.id) // Sorting albums by id in ascending order
+      : [
+          {
+            name: 'Overly Dedicated',
+            id: '1',
+            img: '/src/albums/overlydedicated.jpg',
+            desc: '',
+            stars: 0,
+            review: '',
+          },
+          {
+            name: 'Section.80',
+            id: '2',
+            img: '/src/albums/section80.jpg',
+            desc: '',
+            stars: 0,
+            review: '',
+          },
+          {
+            name: 'Good Kid, M.A.A.D City',
+            id: '3',
+            img: '/src/albums/gkmc.jpg',
+            desc: '',
+            stars: 0,
+            review: '',
+          },
+          {
+            name: 'Good Kid, M.A.A.D City (Deluxe)',
+            id: '4',
+            img: '/src/albums/gkmcd.jpg',
+            desc: '',
+            stars: 0,
+            review: '',
+          },
+          {
+            name: 'To Pimp a Butterfly',
+            id: '5',
+            img: '/src/albums/tpab.jpg',
+            desc: '',
+            stars: 0,
+            review: '',
+          },
+          {
+            name: 'untitled unmastered.',
+            id: '6',
+            img: '/src/albums/uu.jpg',
+            desc: '',
+            stars: 0,
+            review: '',
+          },
+          {
+            name: 'DAMN.',
+            id: '7',
+            img: '/src/albums/damn.jpg',
+            desc: '',
+            stars: 0,
+            review: '',
+          },
+          {
+            name: 'Black Panther: The Album',
+            id: '8',
+            img: '/src/albums/bp.jpg',
+            desc: '',
+            stars: 0,
+            review: '',
+          },
+          {
+            name: 'Mr Morale & the Big Steppers',
+            id: '9',
+            img: '/src/albums/mmatbs.jpg',
+            desc: '',
+            stars: 0,
+            review: '',
+          },
+          {
+            name: 'GNX',
+            id: '10',
+            img: '/src/albums/gnx.jpg',
+            desc: '',
+            stars: 0,
+            review: '',
+          },
+          {
+            name: 'Not Like Us',
+            id: '11',
+            img: '/src/albums/nls.jpg',
+            desc: '',
+            stars: 0,
+            review: '',
+          },
+        ].sort((a, b) => a.id - b.id)  // Sorting the default albums by id
+  )
+
+  watch(
+    albums,
+    () => {
+      localStorage.setItem('albums', JSON.stringify(albums))
     },
-    {
-      name: 'Late Registration',
-      id: '2',
-      img: '/src/albums/late registration.jpg',
-      stars: 0,
-      review: '',
-    },
-  ])
+    { deep: true },
+  )
+
   return { albums }
 }
+
+
+
 
 /*, 
   { name: 'Graduation', id: '3', img: '/src/albums/graduation.jpg', stars: '', review: '' },

@@ -18,7 +18,7 @@ function review(album) {
 
 <template>
   <main class="container justify-end flex flex-wrap items-center h-screen">
-    <AlbumList v-for="album in albums" :key="album.name" :album="album">
+    <AlbumList v-for="album in albums" :key="album.id" :album="album">
       <button
         @click="review(album)"
         class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded"

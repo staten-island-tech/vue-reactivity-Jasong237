@@ -22,7 +22,7 @@ const props = defineProps({
     <img class="w-25" :src="album.img" />
     <div class="px-6 py-4">
       <div class="font-bold text-xl mb-2">{{ album.name }}</div>
-      <p>Some extra text if needed</p>
+      <p>{{ album.desc }}</p>
       <slot> </slot>
     </div>
   </div>

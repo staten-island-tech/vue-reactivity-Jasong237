@@ -11,7 +11,8 @@ const tempArray = reactive([])
 console.log(albums[0].stars)
 const currentArray = ref([])
 
-const id = ref('')
+const id = ref(0)
+const otherNum = ref(0)
 
 onMounted(() => {
   id.value = localStorage.getItem('selectedAlbumId') || 'No ID Found'
@@ -31,6 +32,44 @@ onMounted(() => {
 function syncArray(album) {
   currentArray.value.push(album)
   console.log('Updated currentArray:', currentArray.value)
+}
+
+const reviewText = ref('')
+const selectedRating = ref(0)
+function submitReview() {
+  const albumIndex = currentArray.value.findIndex((album) => album.id === id.value)
+  selectedRating.value = starAmt.value
+  console.log('Review', reviewText.value)
+  console.log('Hey', selectedRating.value)
+  if (albumIndex !== -1) {
+    console.log('yo', albumIndex)
+    console.log('yo', id.value)
+
+    albums[id.value].stars = selectedRating.value
+    albums[id.value].review = reviewText.value
+  }
+
+  console.log('HEllo', albumIndex)
+  albums.forEach((album) => {
+    if (album.id !== id.value) {
+      console.log('Jason', album)
+    }
+  })
+  deleteAlbum()
+  albums.push(...currentArray.value)
+  console.log('Temp', tempArray)
+
+  console.log('Test', albums)
+  console.log('stars', albums[id.value].stars)
+  console.log('Updated Album:', albums)
+  reviewText.value = ''
+  selectedRating.value = 0
+
+  router.push('/')
+}
+
+const deleteAlbum = (index) => {
+  albums.splice(index, 1)
 }
 
 const starAmt = ref(0)
@@ -64,48 +103,6 @@ function star4() {
 }
 function star5() {
   return starAmt.value > 4 ? '/src/albums/filledstar.png' : '/src/albums/star.png'
-}
-
-const reviewText = ref('')
-const selectedRating = ref(0)
-function submitReview() {
-  const albumIndex = currentArray.value.findIndex((album) => album.id === id.value)
-  selectedRating.value = starAmt.value
-  /*   console.log('yoooo', currentArray[0].stars.value) */
-  console.log('Review', reviewText.value)
-  console.log('Hey', selectedRating.value)
-  if (albumIndex !== -1) {
-    const albtum = currentArray.value[albumIndex]
-    console.log('yo', albtum)
-
-    albums[0].stars = selectedRating.value
-    /* currentArray[albumIndex].review.value = reviewText.value */
-  }
-
-  console.log('HEllo', albumIndex)
-  albums.forEach((album) => {
-    if (album.id !== id.value) {
-      console.log('Jason', album)
-    }
-
-    /*    console.log(album) */
-  })
-  deleteAlbum()
-  albums.push(currentArray.value)
-  console.log('Temp', tempArray)
-
-  /*   albums = [] */
-  console.log('Test', albums)
-  /*   albums.push(currentArray) */
-  console.log('stars', albums[0].stars)
-  console.log('Updated Album:', albums[0])
-
-  reviewText.value = ''
-  selectedRating.value = 0
-  /*   router.push('/') */
-}
-const deleteAlbum = (index) => {
-  albums.splice(index, 1) // Remove the album at the specified index
 }
 </script>
 
