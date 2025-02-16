@@ -101,7 +101,7 @@ export function useAlbums() {
             stars: 0,
             review: '',
           },
-        ].sort((a, b) => a.id - b.id)  // Sorting the default albums by id
+        ].sort((a, b) => a.id - b.id), // Sorting the default albums by id
   )
 
   watch(
@@ -114,9 +114,6 @@ export function useAlbums() {
 
   return { albums }
 }
-
-
-
 
 /*, 
   { name: 'Graduation', id: '3', img: '/src/albums/graduation.jpg', stars: '', review: '' },
