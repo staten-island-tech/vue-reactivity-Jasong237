@@ -36,7 +36,7 @@ function syncArray(album) {
 
 const reviewText = ref('')
 const selectedRating = ref(0)
-function submitReview() {
+/* function submitReview() {
   const albumIndex = currentArray.value.findIndex((album) => album.id === id.value)
   selectedRating.value = starAmt.value
   console.log('Review', reviewText.value)
@@ -66,7 +66,26 @@ function submitReview() {
   selectedRating.value = 0
 
   router.push('/')
+} */
+
+function submitReview() {
+  const albumIndex = albums.findIndex(album => album.id === id.value)
+  
+  if (albumIndex !== -1) {
+    albums[albumIndex].stars = starAmt.value
+    albums[albumIndex].review = reviewText.value
+  }
+
+  // Update localStorage
+  localStorage.setItem('albums', JSON.stringify(albums))
+
+  // Clear form
+  reviewText.value = ''
+  starAmt.value = 0
+
+    router.push('/')
 }
+
 
 const deleteAlbum = (index) => {
   albums.splice(index, 1)
