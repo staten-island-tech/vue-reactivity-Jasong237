@@ -7,11 +7,10 @@ const props = defineProps({
   stars: Number,
   review: String,
 })
-
 </script>
 
 <template>
-  <div class="card max-w-sm rounded overflow-hidden shadow-lg">
+  <div class="card rounded overflow-hidden shadow-lg min-w-100 items-center m-4">
     <img class="w-25" :src="album.img" />
     <div class="px-6 py-4">
       <div class="font-bold text-xl mb-2">{{ album.name }}</div>

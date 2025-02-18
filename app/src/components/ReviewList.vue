@@ -7,7 +7,6 @@ const props = defineProps({
   stars: Number,
   review: String,
 })
-
 </script>
 
 <template>
@@ -16,7 +15,7 @@ const props = defineProps({
     <div class="px-6 py-4">
       <div class="font-bold text-xl mb-2">{{ album.name }}</div>
       <p>{{ album.desc }}</p>
-      <p> {{ album.stars }}</p>
+      <p>{{ album.stars }}</p>
       <slot> </slot>
     </div>
   </div>

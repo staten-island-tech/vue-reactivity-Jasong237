@@ -69,8 +69,8 @@ const selectedRating = ref(0)
 } */
 
 function submitReview() {
-  const albumIndex = albums.findIndex(album => album.id === id.value)
-  
+  const albumIndex = albums.findIndex((album) => album.id === id.value)
+
   if (albumIndex !== -1) {
     albums[albumIndex].stars = starAmt.value
     albums[albumIndex].review = reviewText.value
@@ -83,9 +83,8 @@ function submitReview() {
   reviewText.value = ''
   starAmt.value = 0
 
-    router.push('/')
+  router.push('/')
 }
-
 
 const deleteAlbum = (index) => {
   albums.splice(index, 1)

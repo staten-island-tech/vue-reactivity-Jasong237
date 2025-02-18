@@ -2,10 +2,14 @@
 import { RouterLink, RouterView } from 'vue-router'
 </script>
 
-<template>
-  <header>
-    <div class="wrapper">
-      <nav>
+<template class="">
+  <header class="">
+    <div>
+      <h1 class="flex items-center justify-center">Rate Kendrick Lamar Albums (+ Not Like Us)</h1>
+    </div>
+
+    <div class="wrapper flex items-center justify-center">
+      <nav class="">
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/MyReviews">My Reviews</RouterLink>
         <RouterLink to="/ReviewStats">Review Stats</RouterLink>
@@ -17,6 +21,7 @@ import { RouterLink, RouterView } from 'vue-router'
 </template>
 
 <style scoped>
+/* 
 header {
   line-height: 1.5;
   max-height: 100vh;
@@ -32,6 +37,8 @@ nav {
   font-size: 12px;
   text-align: center;
   margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 nav a.router-link-exact-active {
@@ -77,5 +84,5 @@ nav a:first-of-type {
     padding: 1rem 0;
     margin-top: 1rem;
   }
-}
+} */
 </style>
