@@ -2,8 +2,10 @@
 import { ref, onMounted, reactive } from 'vue'
 import router from '../router/index'
 import AlbumList from '@/components/AlbumList.vue'
-
 import { useAlbums } from '../components/TrueAlbums.vue'
+import star from '@/assets/albums/star.png'
+import filledstar from '@/assets/albums/filledstar.png'
+
 
 const { albums } = useAlbums()
 const tempArray = reactive([])
@@ -74,19 +76,19 @@ function chooseStar5() {
   starAmt.value = 5
 }
 function star1() {
-  return starAmt.value > 0 ? '/src/albums/filledstar.png' : '/src/albums/star.png'
+  return starAmt.value > 0 ? filledstar : star
 }
 function star2() {
-  return starAmt.value > 1 ? '/src/albums/filledstar.png' : '/src/albums/star.png'
+  return starAmt.value > 1 ? filledstar : star
 }
 function star3() {
-  return starAmt.value > 2 ? '/src/albums/filledstar.png' : '/src/albums/star.png'
+  return starAmt.value > 2 ? filledstar : star
 }
 function star4() {
-  return starAmt.value > 3 ? '/src/albums/filledstar.png' : '/src/albums/star.png'
+  return starAmt.value > 3 ? filledstar : star
 }
 function star5() {
-  return starAmt.value > 4 ? '/src/albums/filledstar.png' : '/src/albums/star.png'
+  return starAmt.value > 4 ? filledstar : star
 }
 </script>
 
