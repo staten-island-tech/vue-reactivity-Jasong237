@@ -15,7 +15,7 @@ export function useAlbums() {
           {
             name: 'Overly Dedicated',
             id: '1',
-            img: '/assets/albums/overlydedicated.jpg',
+            img: '@/assets/albums/overlydedicated.jpg',
             desc: '',
             stars: 0,
             review: '',
@@ -23,7 +23,7 @@ export function useAlbums() {
           {
             name: 'Section.80',
             id: '2',
-            img: '\src\assets\albums\section80.jpg',
+            img: '@/assets/albums/section80.jpg',
             desc: '',
             stars: 0,
             review: '',
@@ -31,7 +31,7 @@ export function useAlbums() {
           {
             name: 'Good Kid, M.A.A.D City',
             id: '3',
-            img: '\src\assets\albums\gkmc.jpg',
+            img: '@/assets/albums/gkmc.jpg',
             desc: '',
             stars: 0,
             review: '',
