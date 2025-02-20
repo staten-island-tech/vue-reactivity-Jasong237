@@ -15,7 +15,7 @@ export function useAlbums() {
           {
             name: 'Overly Dedicated',
             id: '1',
-            img: '/src/albums/overlydedicated.jpg',
+            img: '../app/public/overlydedicated.jpg',
             desc: '',
             stars: 0,
             review: '',
@@ -23,7 +23,7 @@ export function useAlbums() {
           {
             name: 'Section.80',
             id: '2',
-            img: '/src/albums/section80.jpg',
+            img: '../app/public/section80.jpg', 
             desc: '',
             stars: 0,
             review: '',
@@ -31,7 +31,7 @@ export function useAlbums() {
           {
             name: 'Good Kid, M.A.A.D City',
             id: '3',
-            img: '/src/albums/gkmc.jpg',
+            img: '../app/public/gkmc.jpg',
             desc: '',
             stars: 0,
             review: '',
@@ -39,7 +39,7 @@ export function useAlbums() {
           {
             name: 'Good Kid, M.A.A.D City (Deluxe)',
             id: '4',
-            img: '/src/albums/gkmcd.jpg',
+            img: '../app/public/gkmcd.jpg',
             desc: '',
             stars: 0,
             review: '',
@@ -47,7 +47,7 @@ export function useAlbums() {
           {
             name: 'To Pimp a Butterfly',
             id: '5',
-            img: '/src/albums/tpab.jpg',
+            img: '../app/public/tpab.jpg',
             desc: '',
             stars: 0,
             review: '',
@@ -55,7 +55,7 @@ export function useAlbums() {
           {
             name: 'untitled unmastered.',
             id: '6',
-            img: '/src/albums/uu.jpg',
+            img: '../app/public/uu.jpg',
             desc: '',
             stars: 0,
             review: '',
@@ -63,7 +63,7 @@ export function useAlbums() {
           {
             name: 'DAMN.',
             id: '7',
-            img: '/src/albums/damn.jpg',
+            img: '../app/public/damn.jpg',
             desc: '',
             stars: 0,
             review: '',
@@ -71,7 +71,7 @@ export function useAlbums() {
           {
             name: 'Black Panther: The Album',
             id: '8',
-            img: '/src/albums/bp.jpg',
+            img: '../app/public/bp.jpg',
             desc: '',
             stars: 0,
             review: '',
@@ -79,7 +79,7 @@ export function useAlbums() {
           {
             name: 'Mr Morale & the Big Steppers',
             id: '9',
-            img: '/src/albums/mmatbs.jpg',
+            img: '../app/public/mmatbs.jpg',
             desc: '',
             stars: 0,
             review: '',
@@ -87,7 +87,7 @@ export function useAlbums() {
           {
             name: 'GNX',
             id: '10',
-            img: '/src/albums/gnx.jpg',
+            img: '../app/public/gnx.jpg', 
             desc: '',
             stars: 0,
             review: '',
@@ -95,12 +95,12 @@ export function useAlbums() {
           {
             name: 'Not Like Us',
             id: '11',
-            img: '/src/albums/nls.jpg',
+            img: '../app/public/nls.jpg',
             desc: '',
             stars: 0,
             review: '',
           },
-        ].sort((a, b) => a.id - b.id), // Sorting the default albums by id
+        ].sort((a, b) => a.id - b.id),
   )
 
   watch(
@@ -113,43 +113,6 @@ export function useAlbums() {
 
   return { albums }
 }
-
-/*, 
-  { name: 'Graduation', id: '3', img: '/src/albums/graduation.jpg', stars: '', review: '' },
-  {
-    name: '808s & Heartbreak',
-    id: '4',
-    img: '/src/albums/808s and heartbreak.webp',
-    stars: '',
-    review: '',
-  },
-  {
-    name: 'Watch the Throne',
-    id: '5',
-    img: '/src/albums/watch the throne.jpg',
-    stars: '',
-    review: '',
-  },
-  { name: 'MBDTF', id: '6', img: '/src/albums/mbdtf.jpg', stars: '', review: '' },
-  {
-    name: 'The Life of Pablo',
-    id: '7',
-    img: '/src/albums/the life of pablo.jpg',
-    stars: '',
-    review: '',
-  },
-  { name: 'Ye', id: '8', img: '/src/albums/ye.jpg', stars: '', review: '' },
-  {
-    name: 'Kids See Ghosts',
-    id: '9',
-    img: '/src/albums/kids see ghosts.png',
-    stars: '',
-    review: '',
-  },
-  { name: 'Jesus is King', id: '10', img: '/src/albums/jesus is king.png', stars: '', review: '' },
-  { name: 'Donda', id: '11', img: '/src/albums/donda.jpg', stars: '', review: '' },
-  { name: 'Vultures 1', id: '12', img: '/src/albums/vultures 1.webp', stars: '', review: '' },
-  { name: 'Vultures 2', id: '13', img: '/src/albums/vultures 2.png', stars: '', review: '' }, */
 </script>
 
 <style lang="scss" scoped></style>

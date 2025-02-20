@@ -1,7 +1,7 @@
 <template>
   <div class="w-[400px] border-4 border-emerald-500 p-4">
     <h1 class="text-2xl">My Profile</h1>
-    <img class="w-25" src="/src/albums/defaultpfp.png" />
+    <img class="w-25" src="/defaultpfp.png" />
     <p class="text-lg text-emerald-500">My Best Album(s): {{ bestAlbums }} (Rating: {{ highestStars }})</p>
     <p class="text-lg text-red-500">My Worst Album(s): {{ worstAlbums }} (Rating: {{ lowestStars }})</p>
     <p class="mb-8">Total Albums Reviewed: {{ reviewed }}</p>
@@ -11,7 +11,7 @@
 
 <script setup>
 import AlbumList from '../components/AlbumList.vue'
-import { useAlbums } from '../albums/TrueAlbums.vue'
+import { useAlbums } from '../components/TrueAlbums.vue'
 
 let total = 0
 let numbers = 0

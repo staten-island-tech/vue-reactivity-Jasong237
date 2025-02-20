@@ -1,6 +1,6 @@
 <script setup>
 import ReviewList from '../components/ReviewList.vue'
-import { useAlbums } from '../albums/TrueAlbums.vue'
+import { useAlbums } from '../components/TrueAlbums.vue'
 
 const { albums } = useAlbums()
 

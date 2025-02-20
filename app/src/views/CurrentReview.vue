@@ -3,7 +3,7 @@ import { ref, onMounted, reactive } from 'vue'
 import router from '../router/index'
 import AlbumList from '@/components/AlbumList.vue'
 
-import { useAlbums } from '../albums/TrueAlbums.vue'
+import { useAlbums } from '../components/TrueAlbums.vue'
 
 const { albums } = useAlbums()
 const tempArray = reactive([])
