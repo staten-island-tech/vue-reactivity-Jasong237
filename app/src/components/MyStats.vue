@@ -3,7 +3,7 @@ const props = defineProps({
   bestAlbums: String,
   worstAlbums: String,
   reviewed: Number,
-  total: Number, 
+  total: Number,
   bestStars: Number,
   worstStars: Number,
 })

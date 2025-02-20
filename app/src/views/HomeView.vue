@@ -2,7 +2,6 @@
 import router from '../router/index'
 import AlbumList from '../components/AlbumList.vue'
 import { ref } from 'vue'
-
 import { useAlbums } from '../components/TrueAlbums.vue'
 
 const { albums } = useAlbums()
@@ -29,6 +28,4 @@ function review(album) {
   </main>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

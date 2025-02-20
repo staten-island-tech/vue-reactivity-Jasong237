@@ -9,12 +9,7 @@ const filteredAlbums = albums.filter((album) => album.stars !== 0)
 
 <template>
   <div class="flex flex-wrap gap-4 justify-center w-full">
-    <ReviewList 
-      v-for="album in filteredAlbums" 
-      :key="album.id" 
-      :album="album"
-      class="mb-4"
-    >
+    <ReviewList v-for="album in filteredAlbums" :key="album.id" :album="album" class="mb-4">
     </ReviewList>
   </div>
 </template>

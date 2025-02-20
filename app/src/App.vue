@@ -1,38 +1,35 @@
-<script setup>
-</script>
+<script setup></script>
 
 <template class="">
   <header class="">
     <div>
-      <h1 class="flex items-center justify-center text-3xl">Rate Kendrick Lamar Albums (+ Not Like Us)</h1>
+      <h1 class="flex items-center justify-center text-3xl">
+        Rate Kendrick Lamar Albums (+ Not Like Us)
+      </h1>
     </div>
 
     <div class="wrapper flex items-center justify-center p-4">
-  <nav class="flex space-x-4">
-    <RouterLink 
-      to="/" 
-      class="border-r border-black-500 pr-4 py-2" 
-      active-class="router-link-exact-active"
-    >
-      Home
-    </RouterLink>
+      <nav class="flex space-x-4">
+        <RouterLink
+          to="/"
+          class="border-r border-black-500 pr-4 py-2"
+          active-class="router-link-exact-active"
+        >
+          Home
+        </RouterLink>
 
-    <RouterLink 
-      to="/MyReviews" 
-      class="border-r border-black-500 pr-4 py-2" 
-      active-class="router-link-exact-active"
-    >
-      My Reviews
-    </RouterLink>
+        <RouterLink
+          to="/MyReviews"
+          class="border-r border-black-500 pr-4 py-2"
+          active-class="router-link-exact-active"
+        >
+          My Reviews
+        </RouterLink>
 
-    <RouterLink 
-      to="/ReviewStats" 
-      class="pr-4 py-2" 
-      active-class="router-link-exact-active"
-    >
-      Review Stats
-    </RouterLink>
-  </nav>
+        <RouterLink to="/ReviewStats" class="pr-4 py-2" active-class="router-link-exact-active">
+          Review Stats
+        </RouterLink>
+      </nav>
     </div>
   </header>
 
@@ -40,12 +37,6 @@
 </template>
 
 <style scoped>
-
-
-
-
-
-
 nav a.router-link-exact-active {
   color: var(--color-text);
 }

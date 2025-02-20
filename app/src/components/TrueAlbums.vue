@@ -10,12 +10,12 @@ export function useAlbums() {
 
   const albums = reactive(
     storedAlbums.length
-      ? storedAlbums.sort((a, b) => a.id - b.id) 
+      ? storedAlbums.sort((a, b) => a.id - b.id)
       : [
           {
             name: 'Overly Dedicated',
             id: '1',
-            img: '../app/public/overlydedicated.jpg',
+            img: 'app\src\assets\albums\overlydedicated.jpg',
             desc: '',
             stars: 0,
             review: '',
@@ -23,7 +23,7 @@ export function useAlbums() {
           {
             name: 'Section.80',
             id: '2',
-            img: '../app/public/section80.jpg', 
+            img: 'app\public\albums\section80.jpg',
             desc: '',
             stars: 0,
             review: '',
@@ -31,7 +31,7 @@ export function useAlbums() {
           {
             name: 'Good Kid, M.A.A.D City',
             id: '3',
-            img: '../app/public/gkmc.jpg',
+            img: '../app/albums/gkmc.jpg',
             desc: '',
             stars: 0,
             review: '',
@@ -39,7 +39,7 @@ export function useAlbums() {
           {
             name: 'Good Kid, M.A.A.D City (Deluxe)',
             id: '4',
-            img: '../app/public/gkmcd.jpg',
+            img: '../app/public/albums/gkmcd.jpg',
             desc: '',
             stars: 0,
             review: '',
@@ -47,7 +47,7 @@ export function useAlbums() {
           {
             name: 'To Pimp a Butterfly',
             id: '5',
-            img: '../app/public/tpab.jpg',
+            img: '../app/public/albums/tpab.jpg',
             desc: '',
             stars: 0,
             review: '',
@@ -55,7 +55,7 @@ export function useAlbums() {
           {
             name: 'untitled unmastered.',
             id: '6',
-            img: '../app/public/uu.jpg',
+            img: '../app/public/albums/uu.jpg',
             desc: '',
             stars: 0,
             review: '',
@@ -63,7 +63,7 @@ export function useAlbums() {
           {
             name: 'DAMN.',
             id: '7',
-            img: '../app/public/damn.jpg',
+            img: '../app/public/albums/damn.jpg',
             desc: '',
             stars: 0,
             review: '',
@@ -71,7 +71,7 @@ export function useAlbums() {
           {
             name: 'Black Panther: The Album',
             id: '8',
-            img: '../app/public/bp.jpg',
+            img: '../app/public/albums/bp.jpg',
             desc: '',
             stars: 0,
             review: '',
@@ -79,7 +79,7 @@ export function useAlbums() {
           {
             name: 'Mr Morale & the Big Steppers',
             id: '9',
-            img: '../app/public/mmatbs.jpg',
+            img: '../app/public/albums/mmatbs.jpg',
             desc: '',
             stars: 0,
             review: '',
@@ -87,7 +87,7 @@ export function useAlbums() {
           {
             name: 'GNX',
             id: '10',
-            img: '../app/public/gnx.jpg', 
+            img: '../app/public/albums/gnx.jpg',
             desc: '',
             stars: 0,
             review: '',
@@ -95,7 +95,7 @@ export function useAlbums() {
           {
             name: 'Not Like Us',
             id: '11',
-            img: '../app/public/nls.jpg',
+            img: '../app/public/albums/nls.jpg',
             desc: '',
             stars: 0,
             review: '',

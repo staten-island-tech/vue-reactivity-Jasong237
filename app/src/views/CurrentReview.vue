@@ -36,7 +36,6 @@ function syncArray(album) {
 const reviewText = ref('')
 const selectedRating = ref(0)
 
-
 function submitReview() {
   const albumIndex = albums.findIndex((album) => album.id === id.value)
 
@@ -93,7 +92,7 @@ function star5() {
 
 <template>
   <div class="border-4 border-emerald-500 p-4">
-    <div v-for="album in currentArray" :key="album.id" >
+    <div v-for="album in currentArray" :key="album.id">
       <p class="text-2xl">{{ album.name }}</p>
       <img class="w-25" :src="album.img" alt="Album image" />
 

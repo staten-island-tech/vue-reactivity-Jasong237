@@ -2,8 +2,12 @@
   <div class="w-[400px] border-4 border-emerald-500 p-4">
     <h1 class="text-2xl">My Profile</h1>
     <img class="w-25" src="/defaultpfp.png" />
-    <p class="text-lg text-emerald-500">My Best Album(s): {{ bestAlbums }} (Rating: {{ highestStars }})</p>
-    <p class="text-lg text-red-500">My Worst Album(s): {{ worstAlbums }} (Rating: {{ lowestStars }})</p>
+    <p class="text-lg text-emerald-500">
+      My Best Album(s): {{ bestAlbums }} (Rating: {{ highestStars }})
+    </p>
+    <p class="text-lg text-red-500">
+      My Worst Album(s): {{ worstAlbums }} (Rating: {{ lowestStars }})
+    </p>
     <p class="mb-8">Total Albums Reviewed: {{ reviewed }}</p>
     <p class="mb-8">Average Review Rating: {{ total }}</p>
   </div>
