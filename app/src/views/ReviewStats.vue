@@ -50,7 +50,9 @@ findBest()
 
 function findBest() {
   for (let i = 0; i < albums.length; i++) {
-    if (albums[i].stars > highestStars) {
+        if (albums[i].stars === 0) {
+      unreviewedAlbums.push(albums[i].name)
+    } else if (albums[i].stars > highestStars) {
       highestStars = albums[i].stars
       bestAlbums = [albums[i].name]
     } else if (albums[i].stars === highestStars) {

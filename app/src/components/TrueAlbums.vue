@@ -15,7 +15,7 @@ export function useAlbums() {
           {
             name: 'Overly Dedicated',
             id: '1',
-            img: '\src\assets\albums\overlydedicated.jpg',
+            img: '/assets/albums/overlydedicated.jpg',
             desc: '',
             stars: 0,
             review: '',
