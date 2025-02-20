@@ -1,19 +1,38 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template class="">
   <header class="">
     <div>
-      <h1 class="flex items-center justify-center">Rate Kendrick Lamar Albums (+ Not Like Us)</h1>
+      <h1 class="flex items-center justify-center text-3xl">Rate Kendrick Lamar Albums (+ Not Like Us)</h1>
     </div>
 
-    <div class="wrapper flex items-center justify-center">
-      <nav class="">
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/MyReviews">My Reviews</RouterLink>
-        <RouterLink to="/ReviewStats">Review Stats</RouterLink>
-      </nav>
+    <div class="wrapper flex items-center justify-center p-4">
+  <nav class="flex space-x-4">
+    <RouterLink 
+      to="/" 
+      class="border-r border-black-500 pr-4 py-2" 
+      active-class="router-link-exact-active"
+    >
+      Home
+    </RouterLink>
+
+    <RouterLink 
+      to="/MyReviews" 
+      class="border-r border-black-500 pr-4 py-2" 
+      active-class="router-link-exact-active"
+    >
+      My Reviews
+    </RouterLink>
+
+    <RouterLink 
+      to="/ReviewStats" 
+      class="pr-4 py-2" 
+      active-class="router-link-exact-active"
+    >
+      Review Stats
+    </RouterLink>
+  </nav>
     </div>
   </header>
 
@@ -21,25 +40,11 @@ import { RouterLink, RouterView } from 'vue-router'
 </template>
 
 <style scoped>
-/* 
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
 
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-  margin-left: auto;
-  margin-right: auto;
-}
+
+
+
 
 nav a.router-link-exact-active {
   color: var(--color-text);
@@ -58,7 +63,7 @@ nav a {
 nav a:first-of-type {
   border: 0;
 }
-
+/*
 @media (min-width: 1024px) {
   header {
     display: flex;

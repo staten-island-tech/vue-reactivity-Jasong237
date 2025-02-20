@@ -1,7 +1,6 @@
 <script setup>
 import { ref, onMounted, reactive } from 'vue'
 import router from '../router/index'
-/* import { albums } from '../albums/albums.js' */
 import AlbumList from '@/components/AlbumList.vue'
 
 import { useAlbums } from '../albums/TrueAlbums.vue'
@@ -36,37 +35,7 @@ function syncArray(album) {
 
 const reviewText = ref('')
 const selectedRating = ref(0)
-/* function submitReview() {
-  const albumIndex = currentArray.value.findIndex((album) => album.id === id.value)
-  selectedRating.value = starAmt.value
-  console.log('Review', reviewText.value)
-  console.log('Hey', selectedRating.value)
-  if (albumIndex !== -1) {
-    console.log('yo', albumIndex)
-    console.log('yo', id.value)
 
-    albums[id.value].stars = selectedRating.value
-    albums[id.value].review = reviewText.value
-  }
-
-  console.log('HEllo', albumIndex)
-  albums.forEach((album) => {
-    if (album.id !== id.value) {
-      console.log('Jason', album)
-    }
-  })
-  deleteAlbum()
-  albums.push(...currentArray.value)
-  console.log('Temp', tempArray)
-
-  console.log('Test', albums)
-  console.log('stars', albums[id.value].stars)
-  console.log('Updated Album:', albums)
-  reviewText.value = ''
-  selectedRating.value = 0
-
-  router.push('/')
-} */
 
 function submitReview() {
   const albumIndex = albums.findIndex((album) => album.id === id.value)
@@ -76,10 +45,8 @@ function submitReview() {
     albums[albumIndex].review = reviewText.value
   }
 
-  // Update localStorage
   localStorage.setItem('albums', JSON.stringify(albums))
 
-  // Clear form
   reviewText.value = ''
   starAmt.value = 0
 
@@ -125,37 +92,37 @@ function star5() {
 </script>
 
 <template>
-  <div>
-    <div v-for="album in currentArray" :key="album.id">
-      <p>{{ album.name }}</p>
+  <div class="border-4 border-emerald-500 p-4">
+    <div v-for="album in currentArray" :key="album.id" >
+      <p class="text-2xl">{{ album.name }}</p>
       <img class="w-25" :src="album.img" alt="Album image" />
 
       <div class="container flex justify-around space-x-4">
         <button @click="chooseStar1">
-          <img :src="star1()" alt="star" class="w-6 h-6 mr-2" />
+          <img :src="star1()" alt="star" class="w-20 h-20 mr-2" />
         </button>
         <button @click="chooseStar2">
-          <img :src="star2()" alt="star" class="w-6 h-6 mr-2" />
+          <img :src="star2()" alt="star" class="w-20 h-20 mr-2" />
         </button>
         <button @click="chooseStar3">
-          <img :src="star3()" alt="star" class="w-6 h-6 mr-2" />
+          <img :src="star3()" alt="star" class="w-20 h-20 mr-2" />
         </button>
         <button @click="chooseStar4">
-          <img :src="star4()" alt="star" class="w-6 h-6 mr-2" />
+          <img :src="star4()" alt="star" class="w-20 h-20 mr-2" />
         </button>
         <button @click="chooseStar5">
-          <img :src="star5()" alt="star" class="w-6 h-6 mr-2" />
+          <img :src="star5()" alt="star" class="w-20 h-20 mr-2" />
         </button>
       </div>
     </div>
 
     <form>
-      <label for="review" class="block text-lg font-medium text-gray-700">Your Review</label>
+      <label for="review" class="block text-lg font-medium text-gray-500">Your Review</label>
       <textarea
         id="review"
         name="review"
         rows="6"
-        class="mt-2 p-4 w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+        class="mt-2 p-4 w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
         placeholder="Write your review here"
         v-model="reviewText"
       ></textarea>
@@ -164,7 +131,7 @@ function star5() {
       <button
         @click="submitReview"
         type="submit"
-        class="w-full bg-blue-500 text-white py-3 px-6 rounded-md shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        class="w-full bg-emerald-500 text-white py-3 px-6 rounded-md shadow-md hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-200"
       >
         Submit Review
       </button>

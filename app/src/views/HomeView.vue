@@ -17,7 +17,7 @@ function review(album) {
 </script>
 
 <template>
-  <main class="flex flex-wrap justify-center items-center w-full">
+  <main class="flex flex-wrap gap-4 justify-center items-center w-full">
     <AlbumList v-for="album in albums" :key="album.id" :album="album">
       <button
         @click="review(album)"
@@ -30,13 +30,5 @@ function review(album) {
 </template>
 
 <style scoped>
-/* .container {
-flex-wrap: wrap;
-display: flex;
-align-items: center;
-justify-content: center;
-overflow-x: auto;
-width: 100%;
-min-width: 0;
-} */
+
 </style>

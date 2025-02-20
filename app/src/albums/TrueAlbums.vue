@@ -3,15 +3,14 @@
 </template>
 
 <script>
-import { reactive, watch, onMounted } from 'vue'
+import { reactive, watch } from 'vue'
 
 export function useAlbums() {
   const storedAlbums = JSON.parse(localStorage.getItem('albums')) || []
 
-  // Sort the albums by the 'id' field before setting them in reactive
   const albums = reactive(
     storedAlbums.length
-      ? storedAlbums.sort((a, b) => a.id - b.id) // Sorting albums by id in ascending order
+      ? storedAlbums.sort((a, b) => a.id - b.id) 
       : [
           {
             name: 'Overly Dedicated',
