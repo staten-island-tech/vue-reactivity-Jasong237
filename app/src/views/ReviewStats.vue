@@ -1,7 +1,7 @@
 <template>
   <div class="w-[400px] border-4 border-emerald-500 p-4">
     <h1 class="text-2xl">My Profile</h1>
-    <img class="w-25" src="/defaultpfp.png" />
+    <img class="w-25" src="/albums/defaultpfp.png" />
     <p class="text-lg text-emerald-500">
       My Best Album(s): {{ bestAlbums }} (Rating: {{ highestStars }})
     </p>
