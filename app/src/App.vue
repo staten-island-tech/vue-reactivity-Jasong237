@@ -1,4 +1,10 @@
-<script setup></script>
+<script setup>
+function resetSession() {
+  sessionStorage.clear()
+  location.reload()
+}
+
+</script>
 
 <template class="">
   <header class="">
@@ -26,9 +32,10 @@
           My Reviews
         </RouterLink>
 
-        <RouterLink to="/ReviewStats" class="pr-4 py-2" active-class="router-link-exact-active">
+        <RouterLink to="/ReviewStats"   class="border-r border-black-500 pr-4 py-2" active-class="router-link-exact-active">
           Review Stats
         </RouterLink>
+        <RouterLink to="/ResetAll" class="pr-4 py-2" active-class="exact-active" @click="resetSession"> Reset Reviews </RouterLink>
       </nav>
     </div>
   </header>
@@ -42,6 +49,14 @@ nav a.router-link-exact-active {
 }
 
 nav a.router-link-exact-active:hover {
+  background-color: transparent;
+}
+
+nav a.button-exact-active {
+  color: var(--color-text);
+}
+
+nav a.exact-active:hover {
   background-color: transparent;
 }
 

@@ -24,6 +24,11 @@ const router = createRouter({
       component: () => import('../views/CurrentReview.vue'),
     },
     {
+      path: '/resetall',
+      name: 'resetall',
+      component: () => import('../views/ResetAll.vue'),
+    },
+    {
       path: '/myreviews',
       name: 'myreviews',
       // route level code-splitting
