@@ -2,6 +2,7 @@
 @import 'tailwindcss';
 
 body {
+  @apply bg-neutral-900;
 }
 
 #app {
