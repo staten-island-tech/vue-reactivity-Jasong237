@@ -6,8 +6,8 @@
 
 <script setup>
 import router from '../router/index'
-alert("Stats have been reset!")
 router.push('/')
+alert("Stats have been reset!")
 </script>
 
 <style lang="scss" scoped>
