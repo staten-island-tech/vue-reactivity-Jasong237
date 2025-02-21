@@ -8,9 +8,10 @@ const { albums } = useAlbums()
 
 console.log(albums)
 console.log(albums[0].stars)
+
 function review(album) {
   console.log('Review button clicked for album:', album.name)
-  localStorage.setItem('selectedAlbumId', album.id)
+  sessionStorage.setItem('selectedAlbumId', album.id)
   router.push('/CurrentReview')
 }
 </script>

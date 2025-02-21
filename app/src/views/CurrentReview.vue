@@ -8,16 +8,16 @@ import filledstar from '@/assets/albums/filledstar.png'
 
 
 const { albums } = useAlbums()
-const tempArray = reactive([])
 console.log(albums[0].stars)
 const currentArray = ref([])
-
 const id = ref(0)
-const otherNum = ref(0)
+const reviewText = ref('')
+const selectedRating = ref(0)
+
 
 onMounted(() => {
-  id.value = localStorage.getItem('selectedAlbumId') || 'No ID Found'
-  console.log('ID from localStorage:', id.value)
+  id.value = sessionStorage.getItem('selectedAlbumId')
+  console.log('ID from sessionStorage:', id.value)
 
   albums.forEach((album) => {
     console.log('Checking album with id:', album.id)
@@ -35,18 +35,20 @@ function syncArray(album) {
   console.log('Updated currentArray:', currentArray.value)
 }
 
-const reviewText = ref('')
-const selectedRating = ref(0)
-
 function submitReview() {
   const albumIndex = albums.findIndex((album) => album.id === id.value)
+
+  if (starAmt.value === 0){
+    alert("Every album must be at least one star!")
+    return
+  }
 
   if (albumIndex !== -1) {
     albums[albumIndex].stars = starAmt.value
     albums[albumIndex].review = reviewText.value
   }
 
-  localStorage.setItem('albums', JSON.stringify(albums))
+  sessionStorage.setItem('albums', JSON.stringify(albums))
 
   reviewText.value = ''
   starAmt.value = 0

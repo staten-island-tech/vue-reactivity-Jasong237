@@ -1,11 +1,7 @@
 <script setup>
 const props = defineProps({
   album: Object,
-  name: String,
-  id: Number,
-  img: String,
-  stars: Number,
-  review: String,
+
 })
 </script>
 

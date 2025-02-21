@@ -18,7 +18,7 @@ import gnx from '@/assets/albums/gnx.jpg'
 import nls from '@/assets/albums/nls.jpg'
 
 export function useAlbums() {
-  const storedAlbums = JSON.parse(localStorage.getItem('albums')) || []
+  const storedAlbums = JSON.parse(sessionStorage.getItem('albums')) || []
 
   const albums = reactive(
     storedAlbums.length
@@ -112,15 +112,7 @@ export function useAlbums() {
     stars: 0,
     review: '',
   },
-        ].sort((a, b) => a.id - b.id),
-  )
-
-  watch(
-    albums,
-    () => {
-      localStorage.setItem('albums', JSON.stringify(albums))
-    },
-    { deep: true },
+        ]
   )
 
   return { albums }

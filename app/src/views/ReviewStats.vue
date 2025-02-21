@@ -28,6 +28,7 @@ let unreviewedAlbums = []
 
 const { albums } = useAlbums()
 const starValues = []
+
 function countStars() {
   for (let i = 0; i < albums.length; i++) {
     if (albums[i].stars !== 0) {
@@ -45,8 +46,6 @@ function countStars() {
   total = total / numbers
   console.log(total)
 }
-countStars()
-findBest()
 
 function findBest() {
   for (let i = 0; i < albums.length; i++) {
@@ -62,7 +61,6 @@ function findBest() {
   console.log('Best Album:', bestAlbums)
 }
 
-
 function findWorst() {
   for (let i = 0; i < albums.length; i++) {
     if (albums[i].stars === 0) {
@@ -77,6 +75,8 @@ function findWorst() {
   console.log('Worst Album:', worstAlbums)
 }
 
+countStars()
+findBest()
 findWorst()
 </script>
 
