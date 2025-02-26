@@ -100,7 +100,7 @@ function star5() {
       <p class="text-2xl">{{ album.name }}</p>
       <img class="w-25" :src="album.img" alt="Album image" />
 
-      <div class="container flex justify-around space-x-4">
+      <div class=" w-full flex justify-around space-x-4">
         <button @click="chooseStar1">
           <img :src="star1()" alt="star" class="w-20 h-20 mr-2" />
         </button>

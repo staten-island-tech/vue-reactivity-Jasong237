@@ -3,6 +3,7 @@
 
 body {
   @apply bg-neutral-900;
+  @apply text-zinc-400;
 }
 
 #app {
