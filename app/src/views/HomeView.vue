@@ -6,11 +6,7 @@ import { useAlbums } from '../components/TrueAlbums.vue'
 
 const { albums } = useAlbums()
 
-console.log(albums)
-console.log(albums[0].stars)
-
 function review(album) {
-  console.log('Review button clicked for album:', album.name)
   sessionStorage.setItem('selectedAlbumId', album.id)
   router.push('/CurrentReview')
 }

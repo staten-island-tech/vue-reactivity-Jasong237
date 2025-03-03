@@ -6,58 +6,41 @@ import { useAlbums } from '../components/TrueAlbums.vue'
 import star from '@/assets/albums/star.png'
 import filledstar from '@/assets/albums/filledstar.png'
 
-
 const { albums } = useAlbums()
-console.log(albums[0].stars)
 const currentArray = ref([])
 const id = ref(0)
 const reviewText = ref('')
 const selectedRating = ref(0)
 
-
 onMounted(() => {
   id.value = sessionStorage.getItem('selectedAlbumId')
-  console.log('ID from sessionStorage:', id.value)
 
   albums.forEach((album) => {
-    console.log('Checking album with id:', album.id)
     if (album.id === id.value) {
-      syncArray(album)
-      console.log('Matched album:', album)
+      currentArray.value.push(album)
     } else {
-      console.log('Incorrect!')
+      return
     }
   })
 })
 
-function syncArray(album) {
-  currentArray.value.push(album)
-  console.log('Updated currentArray:', currentArray.value)
-}
-
 function submitReview() {
   const albumIndex = albums.findIndex((album) => album.id === id.value)
 
-  if (starAmt.value === 0){
-    alert("Every album must be at least one star!")
+  if (starAmt.value === 0) {
+    alert('Every album must be at least one star!')
     return
-  }
-
-  if (albumIndex !== -1) {
+  } else if (albumIndex !== -1) {
     albums[albumIndex].stars = starAmt.value
     albums[albumIndex].review = reviewText.value
+
+    sessionStorage.setItem('albums', JSON.stringify(albums))
+
+    reviewText.value = ''
+    starAmt.value = 0
+
+    router.push('/')
   }
-
-  sessionStorage.setItem('albums', JSON.stringify(albums))
-
-  reviewText.value = ''
-  starAmt.value = 0
-
-  router.push('/')
-}
-
-const deleteAlbum = (index) => {
-  albums.splice(index, 1)
 }
 
 const starAmt = ref(0)
@@ -100,7 +83,7 @@ function star5() {
       <p class="text-2xl">{{ album.name }}</p>
       <img class="w-25" :src="album.img" alt="Album image" />
 
-      <div class=" w-full flex justify-around space-x-4">
+      <div class="w-full flex justify-around space-x-4">
         <button @click="chooseStar1">
           <img :src="star1()" alt="star" class="w-20 h-20 mr-2" />
         </button>

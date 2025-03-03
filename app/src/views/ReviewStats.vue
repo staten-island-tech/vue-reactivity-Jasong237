@@ -36,20 +36,16 @@ function countStars() {
       reviewed++
     }
   }
-  console.log(starValues)
-
   starValues.forEach((starValue) => {
     total = starValue + total
     numbers++
   })
-  console.log(total)
   total = total / numbers
-  console.log(total)
 }
 
 function findBest() {
   for (let i = 0; i < albums.length; i++) {
-        if (albums[i].stars === 0) {
+    if (albums[i].stars === 0) {
       unreviewedAlbums.push(albums[i].name)
     } else if (albums[i].stars > highestStars) {
       highestStars = albums[i].stars
@@ -58,7 +54,6 @@ function findBest() {
       bestAlbums.push(albums[i].name)
     }
   }
-  console.log('Best Album:', bestAlbums)
 }
 
 function findWorst() {
@@ -72,7 +67,6 @@ function findWorst() {
       worstAlbums.push(albums[i].name)
     }
   }
-  console.log('Worst Album:', worstAlbums)
 }
 
 countStars()

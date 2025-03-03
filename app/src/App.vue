@@ -3,7 +3,6 @@ function resetSession() {
   sessionStorage.clear()
   location.reload()
 }
-
 </script>
 
 <template class="">
@@ -32,10 +31,21 @@ function resetSession() {
           My Reviews
         </RouterLink>
 
-        <RouterLink to="/ReviewStats"   class="border-r border-black-500 pr-4 py-2" active-class="router-link-exact-active">
+        <RouterLink
+          to="/ReviewStats"
+          class="border-r border-black-500 pr-4 py-2"
+          active-class="router-link-exact-active"
+        >
           Review Stats
         </RouterLink>
-        <RouterLink to="/ResetAll" class="pr-4 py-2" active-class="exact-active" @click="resetSession"> Reset Reviews </RouterLink>
+        <RouterLink
+          to="/ResetAll"
+          class="pr-4 py-2"
+          active-class="exact-active"
+          @click="resetSession"
+        >
+          Reset Reviews
+        </RouterLink>
       </nav>
     </div>
   </header>
